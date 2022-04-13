@@ -1,0 +1,144 @@
+/* ! ========= Currency component styles ======== */
+
+.curContainer {
+  position: relative;
+}
+
+.tableWrapper {
+  position: relative;
+  width: 280px;
+  border-radius: 30px;
+  background: var(--blue-active);
+  color: var(--light-color);
+  overflow: hidden;
+}
+
+.tableWrapper svg {
+  position: absolute;
+  bottom: -15%;
+  height: 110%;
+  width: 100%;
+  transition: transform 1s var(--time-function);
+}
+
+.tableWrapper svg:hover,
+.tableWrapper svg:focus-within {
+  transform: scale(1.2);
+}
+
+.tableWrapper table {
+  border-collapse: collapse;
+}
+
+.tableWrapper th {
+  font-family: 'Circe Bold';
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.44;
+  min-height: 50px;
+  width: 280px;
+  padding: 10px;
+  text-transform: none;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
+  background: var(--blue-color);
+}
+.warship {
+  font-family: 'Circe Regular';
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.44;
+  color: var(--light-color);
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
+  z-index: 5;
+}
+
+.currencyName,
+.currencyBuyValue,
+.currencySellValue {
+  font-family: 'Circe Regular';
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.44;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.currencyName {
+  text-align: left;
+  padding: 10px 20px 10px 25px;
+}
+
+.currencyBuyValue,
+.currencySellValue {
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+@media screen and (min-width: 320px) {
+  .tableWrapper {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .tableWrapper th {
+    width: 334px;
+  }
+  .tableWrapper tbody {
+    width: 334px;
+  }
+  .tableWrapper svg {
+    transform: scale(1.1);
+  }
+  .currencyName {
+    padding: 10px 20px 10px 32px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .tableWrapper {
+    /* width: 348px; */
+    /* margin-left: 20px; */
+    margin-top: 0px;
+  }
+  .tableWrapper th {
+    height: 50px;
+    width: 348px;
+  }
+  .tableWrapper tbody {
+    width: 348px;
+  }
+  .tableWrapper svg {
+    bottom: -20%;
+    transform: scale(1.1);
+  }
+  .currencyName {
+    padding: 10px 30px;
+  }
+  .currencyBuyValue,
+  .currencySellValue {
+    padding-top: 20px;
+    padding-bottom: 10px;
+  }
+  .tableWrapper svg:hover,
+  .tableWrapper svg:focus-within {
+    transform: scale(1.3);
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .tableWrapper {
+    height: 347px;
+    width: 348px;
+    margin-left: 0;
+    margin-top: 30px;
+  }
+  .tableWrapper th {
+    height: 60px;
+  }
+  .tableWrapper svg {
+    bottom: -30%;
+  }
+  /* .tableWrapper tbody {
+    height: 347px;
+  } */
+}
+/* ! ======= End currency component styles ====== */

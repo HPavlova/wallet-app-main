@@ -1,0 +1,34 @@
+.wrapper {
+  position: relative;
+  width: 280px;
+  height: 280px;
+  flex-shrink: 0;
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .wrapper {
+    width: 320px;
+    height: 320px;
+    flex-basis: 50%;
+    /* flex-shrink: 0; */
+  }
+}
+
+.chart {
+  width: 320px;
+  height: 320px;
+  position: absolute;
+  overflow: visible;
+  /* z-index: 1000; */
+}
+
+.total {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.5;
+}

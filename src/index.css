@@ -1,0 +1,129 @@
+@import-normalize;
+@import './stylesheet/vars.css';
+@import './stylesheet/fonts.css';
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  font-weight: normal;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+body {
+  font-family: 'Circe Regular';
+  font-size: 16px;
+  background-color: var(--main-background);
+  -webkit-tap-highlight-color: transparent;
+  /* min-height: 100vh; */
+  height: 100%;
+}
+html {
+  /* min-height: 100%; */
+  height: 100%;
+}
+
+#root {
+  /* min-height: 100vh; */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1280px;
+  padding: 0 20px;
+  /* min-height: 100vh; */
+  height: 100%;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: #000;
+  -webkit-box-shadow: 0 0 0px 1000px #ffffff inset;
+  box-shadow: 0 0 0px 1000px #ffffff inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+@media screen and (max-width: 767px) {
+  #diagram .MuiFormControl-root {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    background-repeat: no-repeat, no-repeat;
+    background-image: url('./images/violet-shape.svg'),
+      url('./images/rouge-shape.svg');
+    background-position: bottom -150px left -140px, top -130px right -270px;
+  }
+  .container {
+    padding: 0 40px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  body {
+    background-position: bottom -165px left -140px, top -153px right -74px;
+  }
+  .container {
+    padding: 0 85px;
+  }
+}
+
+div[data-testid='ball-triangle-loading'] {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  transform: translate(-50%, -50%);
+}
+
+/* .MuiFormControl-root */
